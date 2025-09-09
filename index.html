@@ -71,9 +71,47 @@
             </div>
         </section>
 
+        <section class="py-10 px-4 bg-[#f0fdf4]">
+            <div class="max-w-[1920px] mx-auto">
+                <h2 class="text-center text-3xl font-semibold mb-6">Choose Your Trees</h2>
+                <div class="grid grid-cols-12 gap-4 items-start">
+                    <div class="xl:col-span-2 md:col-span-4 col-span-full">
+                        <h4 class="font-semibold text-xl mb-6 max-md:text-center">Categories</h4>
+                        <ul id="category-list" class="flex md:flex-col flex-wrap max-md:justify-center gap-3">
+                            <li id="tree-all" onclick="loadAllPlants()"
+                                class="px-3 py-2 cursor-pointer rounded duration-300 hover:bg-[#15803d] hover:text-white">
+                                All Trees
+                            </li>
+                        </ul>
+                    </div>
+                    <div id="plants-container" class="xl:col-span-7 md:col-span-8 col-span-full">
+                        <div id="loader" class="flex justify-center">
+                            <span class="loading loading-spinner loading-xl"></span>
+                        </div>
+                        <div id="plant-cards" class="grid lg:grid-cols-3 sm:grid-cols-2 gap-4"></div>
+                    </div>
+
+                    <!-- Cart Section -->
+                    <div class="xl:col-span-3 col-span-full">
+                        <div class="card bg-base-100 w-full shadow-sm p-4 space-y-4">
+                            <h4 class="font-semibold text-xl">Your Cart</h4>
+                            <div id="cart-container" class="space-y-4"></div>
+                            <hr>
+                            <div class="flex justify-between items-center">
+                                <h5 class="text-lg font-semibold">Total</h5>
+                                <h5 class="text-lg font-semibold">৳<span id="total-price">0</span></h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
     </main>
 
-
+    <script src="script.js"></script>
 </body>
 
 </html>
