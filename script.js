@@ -1,3 +1,21 @@
+const plantCards = document.getElementById("plant-cards");
+const loader = document.getElementById("loader");
+const cartContainer = document.getElementById("cart-container");
+let cartList = [];
+
+const manageLoader = (loadingStatus) => {
+    if(loadingStatus){
+        loader.classList.remove("hidden");
+        plantCards.classList.add("hidden");
+    }
+    else{
+        loader.classList.add("hidden");
+        plantCards.classList.remove("hidden");
+    }
+}
+
+
+
 // Categories Section
 
 // Load All Categories
@@ -21,4 +39,13 @@ const showAllCategories = (categories) => {
     });
 }
 
+
+
+// Remove Category Highlight
+const removeActive = () => {
+    const allCategories = document.querySelectorAll("#category-list li");
+    allCategories.forEach(category => {
+        category.classList.remove("bg-[#15803d]", "text-white");
+    });
+}
 
