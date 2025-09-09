@@ -213,3 +213,14 @@ const showCartList = (cartList) => {
 
     totalPriceEl.innerText = totalPrice;
 }
+
+
+// Remove Item from Cart
+const removeCart = (plantName) => {
+    const filteredCart = cartList.filter(cart => cart.plantName !== plantName);
+    cartList = filteredCart;
+    showCartList(cartList);
+}
+
+loadAllCategories();
+loadAllPlants();
